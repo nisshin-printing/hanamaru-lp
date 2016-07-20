@@ -1,0 +1,39 @@
+{
+  "name": "hanamaru",
+  "version": "1.0.0",
+  "description": "This is a Vagrant configuration designed for development of WordPress plugins, themes, or websites.",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "browser-sync": "^2.13.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cheerio": "^0.6.2",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-filter": "^4.0.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-header": "^1.8.2",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-svg2png": "^2.0.0",
+    "gulp-svgmin": "^1.2.2",
+    "gulp-svgstore": "^6.0.0",
+    "postcss": "^5.0.21",
+    "gulp-uglify": "^1.5.3",
+    "rimraf": "^2.5.2",
+    "run-sequence": "^1.2.1",
+    "what-input": "^2.1.0"
+  },
+  "devDependencies": {
+    "gulp-ejs": "^2.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": []
+}
