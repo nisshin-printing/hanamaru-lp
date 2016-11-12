@@ -1,0 +1,111 @@
+/* Slider */
+#top-slides,
+#cat-women-carousel,
+#js-clock {
+	position: relative;
+	display: block;
+	user-select: none;
+	touch-action: pan-y;
+	-webkit-tap-highlight-color: transparent;
+	overflow: hidden;
+	* {
+		outline: none;
+	}
+}
+.slick-list {
+	position: relative;
+	overflow: hidden;
+	display: block;
+	margin: 0;
+	padding: 0;
+	&:focus {
+		outline: none;
+	}
+	&.draggable {
+		cursor: pointer;
+		cursor: hand;
+	}
+}
+#top-slides .slick-track,
+#top-slides .slick-list,
+#cat-women-carousel .slick-track,
+#cat-women-carousel .slick-list {
+	transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+	@include clearfix();
+	position: relative;
+	left: 0;
+	top: 0;
+	display: block;
+}
+.slick-loading .slick-track {
+	visibility: hidden;
+}
+.slide-item {
+	display: none;
+	float: left;
+	height: 100%;
+	min-height: 1px;
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+	&.slick-loading img {
+		display: none;
+	}
+	&.dragging img {
+		pointer-events: none;
+	}
+	.slick-initialized & {
+		display: block;
+	}
+	.slick-loading & {
+		visibility: hidden;
+	}
+	.slick-vertical & {
+		display: block;
+		height: auto;
+		border: 1px solid transparent;
+	}
+}
+.slick-arrow.slick-hidden {
+	display: none;
+}
+
+.slick-dots {
+	position: absolute;
+	z-index: 5;
+	bottom: 0;
+	width: 100%;
+	@extend .text-center;
+	li {
+		display: inline-block;
+		margin: 0 6px;
+		zoom: 1;
+		*display: inline;
+	}
+	button {
+		width: 11px;
+		height: 11px;
+		display: block;
+		background-color: $steel;
+		background-color: rgba($black, .5);
+		cursor: pointer;
+		border-radius: 20px;
+		transition: all $mediumDuration ease-in-out;
+		padding: 0;
+		margin: 0;
+		@include textindent;
+		@extend .b-shadow-1;
+		&:hover {
+			background-color: lighten($primary-color, 30%);
+			@extend .b-shadow-1-half;
+		}
+		&.slider-active {
+			background-color: $primary-color;
+			cursor: default;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+// WordPress
+div#wpadminbar {
+	@include breakpoint( 600px ) {
+		position: fixed !important;
+	}
+}
+
+p {
+	display: block;
+	margin: 1em 0;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+.aligncenter {
+	display: block;
+	margin: 1em auto;
+}
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}

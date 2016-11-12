@@ -1,0 +1,24 @@
+table {
+	th,
+	td {
+		vertical-align: top;
+		@extend .text-left;
+		background-color: $white;
+		border: 1px solid #DDD;
+		padding: 1rem;
+		display: block;
+		width: auto;
+	}
+	th {
+		background-color: #F7F7F7;
+	}
+	@include breakpoint( medium ) {
+		th,
+		td {
+			display: table-cell;
+		}
+	}
+	ol {
+		padding-left: 1rem;
+	}
+}

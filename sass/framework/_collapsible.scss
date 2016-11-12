@@ -1,0 +1,81 @@
+.collapsible {
+	border-top: 1px solid $gainsboro;
+	border-right: 1px solid $gainsboro;
+	border-left: 1px solid $gainsboro;
+	margin: .5rem 0 1rem 0;
+	@extend .b-shadow-1;
+	@extend .no-bullet;
+}
+
+.collapsible-header {
+	display: block;
+	cursor: pointer;
+	min-height: 3rem;
+	line-height: 2rem;
+	padding: 0 1rem;
+	background-color: $white;
+	border-bottom: 1px solid $gainsboro;
+	i {
+		width: 2rem;
+		font-size: 1.6rem;
+		display: block;
+		float: left;
+		text-align: center;
+		margin-right: 1rem;
+		transition: transform .3s;
+	}
+	&.active .fa-caret-down {
+		transform: rotate(180deg);
+	}
+}
+.collapsible-title {
+	cursor: auto;
+}
+
+.collapsible-body {
+	display: none;
+	border-bottom: 1px solid $gainsboro;
+	padding: 0 2rem;
+}
+
+// sideNav collapsible styling
+.side-nav {
+	.collapsible {
+		border: none;
+		box-shadow: none;
+		li { padding: 0; }
+	}
+	.collapsible-header {
+		background-color: transparent;
+		border: none;
+		line-height: inherit;
+		height: inherit;
+		margin: 0 1rem;
+	}
+
+	.collapsible-body {
+		border: 0;
+		background-color: $white;
+
+		li a { margin: 0 1rem 0 2rem; }
+	}
+
+}
+
+// Popout Collapsible
+
+.collapsible.popout {
+	border: none;
+	box-shadow: none;
+	> li {
+		box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+		// transform: scaleX(.92);
+		margin: 0 24px;
+		transition: margin .35s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+	}
+	> li.active {
+		box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+		margin: 16px 0;
+		// transform: scaleX(1);
+	}
+}

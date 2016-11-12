@@ -1,0 +1,167 @@
+//======================== Call To Action about Contacts! ========================================================================//
+.c-fab {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 1000;
+	transition:
+		z-index 0s,
+		transform .3s;
+	-webkit-tap-highlight-color: transparent;
+	@include breakpoint( 699px down ) {
+		margin: 25px;
+		right: -13px;
+	}
+	@include breakpoint( 700px ) {
+		margin: 1.875rem;
+	}
+	@include breakpoint( 1200px ) {
+		margin: 2.5rem;
+	}
+	@include breakpoint( 1600px ) {
+		margin: 3.75rem;
+	}
+	&:hover {
+		transform: scale( 1.1 );
+	}
+}
+.c-fab_ripple {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-radius: 50%;
+	z-index: 1;
+	transform: scale( .005 );
+	transition:
+		transform .6s .2s,
+		opacity .3s 0s,
+		visivility 0s 0s;
+	@include breakpoint( 999px down ) {
+		width: 250vh;
+		height: 250vh;
+		margin: {
+			top: -125vh;
+			left: -125vh;
+		}
+	}
+	@include breakpoint( 1000px ) {
+		width: 250vw;
+		height: 250vw;
+		margin: {
+			top: -125vw;
+			left: -125vw;
+		}
+	}
+}
+.c-fab_button {
+	position: relative;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	font-size: 0;
+	z-index: 2;
+	box-shadow:
+		0 1px 1.5px 0 rgba( #000, .12 ),
+		0 1px 1px 0 rgba( #000, .24 );
+	transition:
+		color .3s,
+		background-color .3s,
+		box-shadow .3s,
+		visibility 0s,
+		opacity 0s;
+}
+.c-fab_icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	margin: {
+		top: -12px;
+		left: -12px;
+	}
+	transition: opacity .3s;
+	&.-close {
+		opacity: 0;
+	}
+}
+// Contact section
+.c-contact {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 901;
+	visibility: hidden;
+	opacity: 0;
+	transition:
+		visibility 0s .5s,
+		opacity .4s .2s;
+	text-align: left;
+	-webkit-overflow-scrolling: touch;
+	padding-bottom: 9.375rem;
+	@include breakpoint( 700px down ) {
+		padding-top: 5.625rem;
+	}
+	@include breakpoint( 700px ) {
+		padding-top: 12.5rem;
+	}
+	@include breakpoint( 1200px ) {
+		padding-top: 13.75rem;
+	}
+	@include breakpoint( 1600px ) {
+		padding-top: 15rem;
+	}
+}
+.c-contact_message {
+	position: relative;
+	background-color: transparent;
+	font-weight: 500;
+	line-height: 1.2;
+	font-size: 30px;
+	margin: 1.875rem 0;
+	@include breakpoint( 700px ) {
+		font-size: 4rem;
+		margin: 3.75rem 0;
+	}
+	@include breakpoint( 1000px ) {
+		font-size: 5rem;
+		margin: 3.75rem 0;
+	}
+}
+.c-contact_back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: -60px;
+	opacity: 0;
+	transition: opacity .2s ease-out;
+	width: 3.75rem;
+	height: 3.75rem;
+	margin-bottom: 3.75rem;
+	z-index: 10;
+	@include breakpoint( 1000px down ) {
+		top: 15%;
+	}
+}
+// Open
+.has-contact-open {
+	.c-fab_ripple {
+		transform: scale(1);
+		opacity: 0;
+		visibility: hidden;
+		transition:
+			transform .6s 0s,
+			opacity .3s, .5s,
+			visivility 0s .9s;
+	}
+	.c-contact {
+		transition:
+			visivility 0s .3s,
+			opacity .3s 0s;
+		visibility :visible;
+		opacity: 1;
+		overflow-y: auto;
+	}
+}

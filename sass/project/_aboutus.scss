@@ -1,0 +1,32 @@
+.page-id-23 {
+	.article-body {
+		table,
+		tbody,
+		tr,
+		th,
+		td {
+			border: none;
+			background: none;
+		}
+		tr {
+			padding: 10px;
+			@include breakpoint(medium) {
+				border-bottom: 1px solid #DDD;
+			}
+		}
+		th {
+			background-color: #E6E6E6;
+			@include breakpoint(medium) {
+				width: 15%;
+				background: none;
+			}
+		}
+		th,
+		td {
+			display: block;
+			@include breakpoint(medium) {
+				display: table-cell;
+			}
+		}
+	}
+}

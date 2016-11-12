@@ -1,0 +1,135 @@
+
+
+.card-panel {
+  transition: box-shadow .25s;
+  padding: 20px;
+  margin: .5rem 0 1rem 0;
+  border-radius: $global-radius;
+  @extend .b-shadow-1;
+  background-color: $white;
+}
+
+.card {
+  position: relative;
+  margin: .5rem 0 1rem 0;
+  background-color: $white;
+  transition: box-shadow .25s;
+  border-radius: $global-radius;
+  @extend .b-shadow-1;
+
+
+  .card-title {
+    font-size: 24px;
+    font-weight: 300;
+    &.activator {
+      cursor: pointer;
+    }
+  }
+
+  // Card Sizes
+  &.small, &.medium, &.large {
+    position: relative;
+
+    .card-img {
+      max-height: 60%;
+      overflow: hidden;
+    }
+    .card-content {
+      max-height: 40%;
+      overflow: hidden;
+    }
+    .card-action {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      background-color: inherit;
+    }
+  }
+
+  &.small {
+    height: 300px;
+  }
+
+  &.medium {
+    height: 400px;
+  }
+
+  &.large {
+    height: 500px;
+  }
+
+
+  .card-img {
+    position: relative;
+
+    // Image background for content
+    img {
+      display: block;
+      border-radius: $global-radius;
+      position: relative;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .card-title {
+      color: $white;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 20px;
+    }
+
+  }
+
+  .card-content {
+    padding: 20px;
+    border-radius: $global-radius;
+
+
+    p {
+      margin: 0;
+      color: inherit;
+    }
+    .card-title {
+      line-height: 48px;
+    }
+  }
+
+  .card-action {
+    border-top: 1px solid rgba(160,160,160,.2);
+    padding: 20px;
+
+    a {
+      color: $primary-color;
+      margin-right: 20px;
+      transition: color .3s ease;
+      text-transform: uppercase;
+      text-decoration: underline;
+
+      &:hover { color: darken($primary-color, 30%) }
+    }
+  }
+
+  .card-reveal {
+    padding: 20px;
+    position: absolute;
+    background-color: $white;
+    width: 100%;
+    overflow-y: auto;
+    top: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+
+    .card-title {
+      cursor: pointer;
+      display: block;
+    }
+
+  }
+}

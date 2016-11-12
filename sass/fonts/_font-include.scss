@@ -1,0 +1,24 @@
+// Noto Sans Japanese
+// http://www.google.com/fonts/earlyaccess
+@font-face {
+	font-family: 'ipaexg';
+	src: url('../font/ipaexg.eot?#iefix') format('eot'),
+		url('../font/ipaexg.woff') format('woff'),
+		url('../font/ipaexg.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Noto Sans Japanese';
+	font-style: normal;
+	font-weight: 200;
+	src: url(#{$font}NotoSansJP-Light.woff2) format('woff2'),
+		 url(#{$font}NotoSansJP-Light.woff) format('woff'),
+		 url(#{$font}NotoSansJP-Light.otf) format('opentype');
+}
+@font-face {
+	font-family: 'Noto Sans Japanese';
+	font-style: normal;
+	font-weight: 500;
+	src: url(#{$font}NotoSansJP-Medium.woff2) format('woff2'),
+		 url(#{$font}NotoSansJP-Medium.woff) format('woff'),
+		 url(#{$font}NotoSansJP-Medium.otf) format('opentype');
+}

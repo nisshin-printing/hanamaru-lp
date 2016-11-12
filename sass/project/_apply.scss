@@ -1,0 +1,64 @@
+.page-template-page-apply {
+	h1 {
+		margin: 0 auto;
+	}
+	.-big {
+		@include breakpoint(medium) {
+			font-size: 1.2em;
+		}
+	}
+	.-small {
+		@include breakpoint(medium) {
+			font-size: .8em;
+		}
+	}
+	.-bold {
+		font-weight: bold;
+	}
+	.-block {
+		display: block;
+	}
+	.-indent {
+		@include breakpoint(medium) {
+			padding: 2rem;
+		}
+	}
+	h3 {
+		@extend .-bold;
+		border-left: 5px solid $primary-color;
+		padding-left: 1rem;
+		margin: 1em 0 0;
+	}
+	.p-number {
+		float: left;
+		font-size: 4rem;
+		color: $primary-color;
+		margin-right: 1rem;
+	}
+	.fa-ul li {
+		margin-bottom: 1rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+.l-lp_section {
+	margin: {
+		top: 3rem;
+		bottom: 3rem;
+	}
+}
+.l-float_medium_left {
+	margin: 1rem auto;
+	@include breakpoint(medium) {
+		float: left;
+		margin: 0 1rem 0 auto;
+	}
+}
+.l-vertical_middle th,
+.l-vertical_middle td {
+	vertical-align: middle;
+}
+.l-vertical_middle .button {
+	margin: 0;
+}

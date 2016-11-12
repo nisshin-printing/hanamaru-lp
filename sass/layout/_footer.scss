@@ -1,0 +1,197 @@
+//========================  Mail Magazine CTA  ========================================================================//
+#mail-magazine {
+	background-color: $silver;
+	padding: {
+		top: 40px;
+		bottom: 40px;
+	}
+	svg {
+		width: 3rem;
+		height: 3rem;
+		display: inline-block;
+		vertical-align: middle;
+		position: relative;
+		top: -10px;
+		fill: $primary-color;
+	}
+	p {
+		display: inline-block;
+		margin-left: 2rem;
+		span {
+			display: block;
+			font-weight: bold;
+			color: $primary-color;
+		}
+	}
+	form input {
+		border: none !important;
+	}
+	.input-group {
+		border: 1px solid $medium-gray;
+		border-radius: $global-radius;
+	}
+	.input-group-label {
+		border: none;
+		border-right: 1px solid $medium-gray;
+		background: #FFF !important;
+	}
+	.input-group-field {
+		height: 2.7rem;
+		background: #FFF !important;
+	}
+	.input-group-button {
+		height: 2.7rem;
+		input {
+			padding: 0 2rem;
+			height: 100%;
+		}
+	}
+}
+//========================  Footer Bar Menu  ========================================================================//
+#footer-menu {
+	background-color: #3F6184;
+	text-align: center;
+	color: #FFF;
+	nav {
+		padding: 2rem 0;
+	}
+	@include breakpoint( medium down ) {
+		ul {
+			@include menu-direction( 'vertical' );
+		}
+	}
+	@include breakpoint( medium only ) {
+		li {
+			display: inline-block !important;
+			width: 50%;
+			border: 0 !important;
+			border-left: 1px solid currentColor !important;
+			&:nth-child( 2n - 1 ) {
+				border-left: 0 !important;
+			}
+		}
+	}
+	li {
+		border-right: 1px solid currentColor;
+		border-left: 1px solid currentColor;
+		a {
+			text-decoration: none;
+			transition: all .3s;
+		}
+	}
+	@include breakpoint( large ) {
+		ul {
+			@include menu-expand;
+		}
+		li {
+			border-right: 1px solid currentColor;
+			border-left: none;
+			&:first-child {
+				border-left: 1px solid currentColor;
+			}
+			a {
+				text-decoration: none;
+				transition: all .3s;
+			}
+		}
+	}
+}
+//========================  Page Top  ========================================================================//
+.go-top {
+	a {
+		text-decoration: none;
+		display: block;
+		width: 100%;
+		padding: 1rem 0;
+		transition: all .3s;
+		color: #FFF;
+		text-align: center;
+		background-color: darken( #3F6184, 10% );
+		&:hover {
+			color: #FFF;
+			background-color: darken( #3F6184, 12% );
+		}
+	}
+	.fa {
+		margin-left: 1rem;
+		font-size: 2rem;
+		vertical-align: middle;
+		position: relative;
+		top: -3px;
+	}
+}
+//========================  Footer Menu  ========================================================================//
+.l-foot_menu {
+	@extend .no-bullet;
+	li {
+		display: inline-block;
+	}
+	a {
+		@extend .button;
+		@extend .secondary;
+		margin: 1rem;
+	}
+}
+//========================  Copyright  ========================================================================//
+#copyright {
+	background-color: darken( #3F6184, 15% );
+	position: relative;
+	.column {
+		padding: {
+			top: 120px;
+			bottom: 120px;
+		}
+	}
+	.logo {
+		padding: 25px 0 45px;
+		border-top: 1px solid lighten( #3F6184, 5% );
+	}
+	.large-8 .button {
+		margin-right: 1rem;
+		&:last-child {
+			margin-right: auto;
+		}
+	}
+	.coryright-text {
+		padding-top: 30px;
+		color: lighten( #3F6184, 20% );
+		a {
+			color: #FFF;
+			text-decoration: none;
+			transition: all .3s;
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+	.show-for-large {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 33.33334%;
+		max-width: 33.33334%;
+		height: 100%;
+		padding: 142px 0 0 70px;
+		color: #FFF;
+		background-color: darken( #3F6184, 18% );
+	}
+	.facebook-share {
+		width: 60px;
+		height: 60px;
+		background-color: $facebook;
+		border-radius: $global-radius;
+		font-size: 22px;
+		display: inline-block;
+		text-align: center;
+		text-decoration: none;
+		color: #FFF;
+		transition: background-color .3s;
+		&:hover {
+			background-color: darken( $facebook, 10% );
+		}
+		.fa {
+			margin-top: 20px;
+		}
+	}
+}
