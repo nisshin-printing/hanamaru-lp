@@ -1,12 +1,18 @@
 <%
 'use strict';
-path = {
+const path = {
 	home: 'http://hanamaru-souzoku.com/',
 	css: 'assets/css/',
-	SVG: 'assets/svg/icons.svg#',
-	JS: 'assets/js/',
+	svg: 'assets/svg/icons.svg#',
+	js: 'assets/js/',
 	img: 'assets/img/',
 };
+const data = include('./data.json');
+const json = JSON.parse(data);
 %>
-<%- include('_head', {const: path}); %>
-<%- include('_foot', {const: path}); %>
+<%- include('_head', {path, json}); %>
+<%- include('_hero', {path, json}); %>
+<%- include('_about', {path, json}); %>
+<%- include('_cta', {path, json}); %>
+<%- include('_service', {path, json}); %>
+<%- include('_foot', {path, json}); %>

@@ -50,14 +50,14 @@ $global-width: rem-calc(1200);
 $global-lineheight: 1.4;
 $foundation-palette: (
 	primary: $primary-color,
-	secondary: #777,
+	secondary: $secondary-color,
 	success: #3adb76,
 	warning: #ffae00,
 	alert: #ec5840,
 );
 $body-background: $snow;
-$body-font-color: #222;
-$body-font-family: $noto-font;
+$body-font-color: #999;
+$body-font-family: $main-font;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -97,7 +97,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: $noto-font;
+$header-font-family: $main-font;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -338,7 +338,7 @@ $select-triangle-color: $dark-gray;
 $select-radius: $global-radius;
 $input-color: $black;
 $input-placeholder-color: $medium-gray;
-$input-font-family: $noto-font;
+$input-font-family: $main-font;
 $input-font-size: rem-calc(16);
 $input-background: $white;
 $input-background-focus: $white;

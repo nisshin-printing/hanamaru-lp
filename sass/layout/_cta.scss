@@ -1,0 +1,41 @@
+.l-cta {
+	@extend .l-contents;
+	.l-button_waves {
+		font-size: 2rem;
+		padding: 2rem;
+		background: #FFF;
+		color: $primary-color;
+		@extend .b-shadow-1;
+		.l-button_tooltip { display: none; }
+		&:hover {
+			position: relative;
+			.l-button_tooltip {
+				display: block;
+				position: absolute;
+				top: -4rem;
+				left: 104px;
+				font-size: 1rem;
+				background-color: $primary-color;
+				color: #FFF;
+				width: 250px;
+				padding: 1rem;
+				border-radius: $global-radius;
+				z-index: 100;
+				&::before {
+					content: '';
+					display: block;
+					position: absolute;
+					height: 0;
+					width: 0;
+					bottom: -13px;
+					left: 112px;
+					border: 13px solid transparent;
+					border-right-width: 0;
+					border-left-color: $primary-color;
+					transform: rotate(-270deg);
+					z-index: 100;
+				}
+			}
+		}
+	}
+}

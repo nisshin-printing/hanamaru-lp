@@ -1,0 +1,32 @@
+<section class="l-service bg-white">
+	<div class="l-service_hero row expanded align-middle">
+		<div class="column">
+			<img src="<%= path.home; %>wp-content/uploads/2015/10/header-06.png" alt="はなまる相続のロゴ">
+		</div>
+	</div>
+	<div class="row l-contents">
+		<div class="column small-12">
+			<h2 class="l-contents_title --heading">はなまる相続のサービスメニュー</h2>
+			<p class="l-contents_subtitle">豊富な相談に関連する業務から、あなたの問題に最適な専門家をお選びいただけます。</p>
+		</div>
+	</div>
+	<div class="row small-up-1 medium-up-2 large-up-3">
+		<%
+			var service = json.service;
+			for (var i = 0; i < Object.keys(service).length; i++) {
+		%>
+		<div class="column l-service_box">
+			<div class="l-service_boxinner">
+				<div class="l-service_titlebox">
+					<i class="l-service_icon fa fa-3x <%= service[i].image; %>"></i>
+					<h3 class="l-service_title"><%= service[i].title; %></h3>
+				</div>
+				<div class="l-service_description"><p><%= service[i].description; %></p></div>
+				<div class="l-service_link"><a href="<%= service[i].href; %>" title="<%= service[i].title; %>をさらに詳しく見る">さらに詳しく</a></div>
+			</div>
+		</div>
+		<%
+			}
+		%>
+	</div>
+</section>

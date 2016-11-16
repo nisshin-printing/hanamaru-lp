@@ -23,7 +23,7 @@ svg:not(:root) {
 	position: relative;
 	padding-right: 2.2em;
 	transition: $mediumDuration;
-	font-family: $noto-font;
+	font-family: $main-font;
 	&::after {
 		position: absolute;
 		right: 0.5em;

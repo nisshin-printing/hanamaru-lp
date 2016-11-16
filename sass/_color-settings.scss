@@ -1,3 +1,12 @@
+/*
+* Theme's Color
+*/
+$hanamaru: (
+	primary: #ed7978,
+	secondady: #ffef89,
+
+);
+
 // FOUNDATION 5.5
 $white          : #FFFFFF;
 $ghost          : #FAFAFA;
@@ -20,9 +29,9 @@ $jet            : #222222;
 $black          : #000000;
 
 // Foundation 6 & nisshin.dtdsh main color
-$primary-color: #e8464c;
+$primary-color: map-get($hanamaru, primary);
 $accent-color: #191970;
-$secondary-color: #777777;
+$secondary-color: map-get($hanamaru, secondady);
 $success-color: #3adb76;
 $warning-color: #ffae00;
 $alert-color: #ec5840;
@@ -92,12 +101,3 @@ $brown          : #795548;
 $blue-gray      : #607D8B;
 $web            : #009688;
 $print          : #00BCD4;
-
-/*
- * Theme's Color
- */
-$hanamaru: (
-	primary: #ed7978,
-	secondady: #ffef89,
-	
-);

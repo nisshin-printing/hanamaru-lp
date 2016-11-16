@@ -22,7 +22,8 @@ module.exports = {
 			removeRedundantAttributes: true,
 			removeScriptTypeAttributes: true,
 			removeStyleLinkTypeAttributes: true
-		}
+		},
+		ejsOptions: {}
 	},
 	style: {
 		sass: {

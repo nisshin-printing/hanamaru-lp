@@ -12,7 +12,7 @@ gulp.task('html', () => {
 		.pipe($.plumber({
 			errorHandler: $.notify.onError('<%= error.message %>')
 		}))
-		.pipe($.ejs({}, {ext: '.html'}))
+		.pipe($.ejs(config.ejsOptions, {ext: '.html'}))
 		.pipe($.htmlmin(config.ejs.minify))
 		.pipe(gulp.dest(config.path.ejs.dest))
 		.pipe($.browser.stream());

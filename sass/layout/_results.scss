@@ -1,0 +1,42 @@
+.l-results {
+	max-width: rem-calc(1200);
+	margin: 3rem auto;
+	padding: 1rem;
+	background-color: $snow;
+	border-radius: $global-radius;
+	text-align: center;
+	position: relative;
+}
+.l-results_box {
+	display: inline-block;
+	vertical-align: middle;
+	margin: -.5rem;
+	padding: 2rem;
+	@include breakpoint(large) {
+		width: 33.3333%;
+	}
+	&.--member {}
+	&.--pie-chart {}
+	&.--project {}
+}
+.l-results_main {
+	font-size: 3rem;
+	line-height: 1.1;
+	text-align: left;
+	color: $primary-color;
+}
+.l-results_unit {
+	font-size: 1rem;
+}
+.l-results_name {
+	text-align: left;
+	margin: 0;
+	margin-right: 1rem;
+	padding: 1rem 0;
+	border-top: 3px solid $primary-color;
+}
+.l-results_timestamp {
+	position: absolute;
+	top: 100%;
+	left: 0;
+}

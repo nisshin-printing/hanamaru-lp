@@ -3,8 +3,11 @@
 	position: relative;
 	@include breakpoint(small only) {
 		padding: 1rem 0 0;
-		background-color: #ffef8a;
+		background-color: rgba(#ffef8a, .6);
 		border-radius: $global-radius $global-radius .5rem .5rem;
+	}
+	@include breakpoint(medium) {
+		height: 480px;
 	}
 }
 .l-hero_title {
@@ -14,28 +17,49 @@
 	text-align: center;
 	background: radial-gradient(rgba(#FFF, .2) 0, rgba(#FFF, .4) 40%, transparent 90%, transparent 100%);
 	@include breakpoint(medium) {
-		width: 50%;
+		width: 70%;
 		position: absolute;
 		right: 1rem;
 		top: 3%;
 	}
+	@include breakpoint(large) {
+		width: 50%;
+	}
 }
 .l-hero_bg {
 	width: 100%;
+	@include breakpoint(small only) {
+		position: absolute;
+		top: 1rem;
+		right: 0;
+		left: 0;
+		z-index: -1;
+	}
 	@include breakpoint(medium) {
+		position: relative;
+		height: 100%;
+		background-color: #FFEF8A;
 		border-radius: $global-radius;
+		z-index: -1;
+		img {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
 	}
 }
 .l-hero_desc {
 	position: relative;
 	background-color: #FFF;
-	width: 100%;
 	border-radius: .5rem;
 	padding: 1rem;
 	@include breakpoint(medium) {
 		position: absolute;
 		top: 60%;
 		right: 1rem;
+		width: 70%;
+	}
+	@include breakpoint(large) {
 		width: 50%;
 	}
 }
