@@ -1,8 +1,12 @@
-// Noto Sans Japanese
-// http://www.google.com/fonts/earlyaccess
 @font-face {
-	font-family: 'ipaexg';
-	src: url('../font/ipaexg.eot?#iefix') format('eot'),
-		url('../font/ipaexg.woff') format('woff'),
-		url('../font/ipaexg.ttf') format('truetype');
+	font-family: 'Ricty';
+	font-weight: normal;
+	src: url('../font/RictyDiminished-Regular.ttf') format('truetype'),
+			 url('../font/RictyDiminished-Regular.woff') format('woff');
+}
+@font-face {
+	font-family: 'Ricty';
+	font-weight: bold;
+	src: url('../font/RictyDiminished-bold.ttf') format('truetype'),
+			 url('../font/RictyDiminished-bold.woff') format('woff');
 }

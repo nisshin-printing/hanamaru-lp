@@ -1,0 +1,92 @@
+.l-authority {}
+.l-authority_hero {
+	width: 100%;
+	height: 350px;
+	padding: 2rem 0;
+	text-align: center;
+	position: relative;
+	z-index: 0;
+	overflow: hidden;
+	background: {
+		image: url('//hanamaru-souzoku.com/wp-content/uploads/2015/10/header-05.png');
+		repeat: no-repeat;
+		size: cover;
+	}
+	@include breakpoint(medium) {
+		height: 400px;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		background: inherit;
+		filter: blur(10px);
+		top: -10px;
+		left: -10px;
+		right: -10px;
+		bottom: -10px;
+		z-index: -2;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(#FFF, .6);
+		z-index: -1;
+	}
+}
+.l-authority_herotitle {
+	color: #494949;
+	font-size: 1rem;
+	display: inline-block;
+	margin-bottom: 1rem;
+	border-bottom: 3px solid #494949;
+	@include breakpoint(medium) {
+		font-size: 1.5rem;
+		margin-bottom: 2rem;
+	}
+}
+.l-authority_herosubtitle {
+	color: #494949;
+	font-size: 1.25rem;
+	margin-bottom: 2rem;
+	@include breakpoint(medium) {
+		font-size: 2rem;
+	}
+}
+.l-authority_herodescription {
+	line-height: 1.8;
+	color: #494949;
+	@include breakpoint(small only) {
+		text-align: left;
+	}
+}
+
+/*
+* AUTHORITY GRID
+*/
+.l-authority_box {
+	padding: 2rem 1rem;
+}
+.l-authority_point {
+	margin: 0 auto;
+	width: 100%;
+	color: $primary-color;
+	border-bottom: 2px solid $primary-color;
+	font-size: 1.2rem;
+	@include breakpoint(large) {
+		display: inline-block;
+		width: auto;
+		padding-right: 1.5rem;
+	}
+}
+.l-authority_title {
+	margin-top: 1.8rem;
+	color: #494949;
+	font-weight: bold;
+}
+.l-authority_description {
+	margin-top: 1.5rem;
+}

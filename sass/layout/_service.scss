@@ -43,6 +43,13 @@
 */
 .l-service_box {
 	margin-bottom: 20px;
+	&:nth-of-type(3n-2) {
+		@include breakpoint(medium only) {
+			width: 100%;
+			max-width: none;
+			flex: 0 0 100%;
+		}
+	}
 }
 .l-service_boxinner {
 	background-color: #FAFAFA;
@@ -54,11 +61,14 @@
 }
 .l-service_icon {
 	float: left;
-	color: $primary-color;
+	width: 6rem;
+	border-radius: 6rem;
+	background-color: $secondary-color;
 	margin-right: 1rem;
+	padding: 1rem;
 }
 .l-service_title {
-	margin-top: .7rem;
+	margin-top: 1.8rem;
 	color: $primary-color;
 	font-size: 1rem;
 }
@@ -73,7 +83,13 @@
 	a {
 		@extend .button;
 		width: 100%;
+		border: 2px solid $primary-color;
 		border-radius: 0;
 		background: $primary-color;
+		transition: $mediumDuration;
+		&:hover {
+			color: $primary-color;
+			background: #FFF;
+		}
 	}
 }

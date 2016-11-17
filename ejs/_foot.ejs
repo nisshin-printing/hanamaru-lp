@@ -1,4 +1,16 @@
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" aync></script>
-		<script src="<%= path.js; %>apps.min.js" aync></script>
-	</body>
-</html>
+<footer class="l-footer l-contents">
+	<div class="row align-middle">
+		<div class="column small-12 large-6 large-pull-6 l-footer_brand"><a href="<%= path.home; %>" title="トップページへ戻る" class="l-footer_logo"><img src="<%= path.img; %>logo/topbar.png" alt="はなまる相続のロゴ"></a><a href="https://www.facebook.com/%E4%B8%80%E8%88%AC%E7%A4%BE%E5%9B%A3%E6%B3%95%E4%BA%BA-%E3%81%AF%E3%81%AA%E3%81%BE%E3%82%8B%E7%9B%B8%E7%B6%9A-1008190065869796/" title="トップページへ戻る" class="l-footer_fb"><i class="fa fa-facebook"></i></a></div>
+		<div class="column large-6 large-push-6 l-footer_linkbox">
+		<%
+			var link = json.service;
+			for (var i = 0; i < Object.keys(link).length; i++) {
+		%>
+			<a href="<%= link[i].id + '.html'; %>" class="l-footer_link" title="<%= link[i].title; %>"><%= link[i].title; %></a>
+		<%
+			}
+		%>
+		</div>
+	</div>
+</footer>
+<%- include('_script', {path, json}); %>

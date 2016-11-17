@@ -38,4 +38,46 @@
 			}
 		}
 	}
+	.l-contents_subtitle {
+		margin-bottom: 3rem;
+	}
+}
+.l-cta:nth-last-of-type(1) .button {
+	color: #FFF;
+	background: $primary-color;
+	&:hover .l-button_tooltip {
+		color: $primary-color;
+		background-color: $secondary-color;
+		&::before {
+			border-left-color: $secondary-color;
+		}
+	}
+}
+.l-cta_btntell {
+	background: transparent !important;
+	color: $primary-color !important;
+	display: table;
+	margin: 0 auto;
+	&:hover .fa {
+		animation: {
+			name: hover-buzz-out;
+			duration: .75s;
+			timing-function: linear;
+			iteration-count: 1;
+		}
+	}
+	.fa {
+		display: table-cell;
+		vertical-align: middle;
+		font-size: 3rem;
+		transform: translateZ(0);
+		padding-right: .5rem;
+	}
+	.show-for-small {
+		display: table-cell;
+		vertical-align: middle;
+		font: {
+			size: 1.57rem;
+		}
+	}
 }

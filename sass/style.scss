@@ -1,5 +1,5 @@
 // Global Settings
-$main-font: 'ipaexg', '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+$main-font: 'Ricty', '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
 $imgfolder: '../img/';
 $font: '../font/';
 // Frame Works Import
@@ -68,5 +68,6 @@ $font: '../font/';
 @import 'layout/contents';
 @import 'layout/results';
 @import 'layout/service';
+@import 'layout/authority';
 @import 'layout/cta';
 @import 'layout/footer';

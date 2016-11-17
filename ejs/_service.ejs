@@ -15,14 +15,15 @@
 			var service = json.service;
 			for (var i = 0; i < Object.keys(service).length; i++) {
 		%>
-		<div class="column l-service_box">
+		<div class="column l-service_box <%= '--' + service[i].id; %>">
 			<div class="l-service_boxinner">
 				<div class="l-service_titlebox">
-					<i class="l-service_icon fa fa-3x <%= service[i].image; %>"></i>
+					<div class="l-service_icon"><img src="<%= path.img + 'service/' 
+					+ service[i].id + '.png'; %>" alt="<%= service[i].title; %>"></div>
 					<h3 class="l-service_title"><%= service[i].title; %></h3>
 				</div>
 				<div class="l-service_description"><p><%= service[i].description; %></p></div>
-				<div class="l-service_link"><a href="<%= service[i].href; %>" title="<%= service[i].title; %>をさらに詳しく見る">さらに詳しく</a></div>
+				<div class="l-service_link"><a href="<%= service[i].id + '.html'; %>" title="<%= service[i].title; %>をさらに詳しく見る">さらに詳しく</a></div>
 			</div>
 		</div>
 		<%

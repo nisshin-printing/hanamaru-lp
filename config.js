@@ -3,6 +3,7 @@
  * タスク設定ファイル
  */
 module.exports = {
+	dest: './customer',
 	IS_PRODUCTION: false,
 	dist: 'public',
 	autoTest: false,
@@ -48,6 +49,10 @@ module.exports = {
 	js: {
 		sourcemaps: './maps'
 	},
+	copy: {
+		src: ['./font/*'],
+		dest: './customer/assets/font'
+	},
 	browserify: {
 		bundleOption: {
 			cache: {},
@@ -78,7 +83,7 @@ module.exports = {
 		svg: {
 			src: 'svg/**/*.svg',
 			watch: 'svg/**/*.svg',
-			dest: 'customer/assets/svg',
+			dest: 'customer/assets/svg'
 		},
 		js: {
 			src: ['js/*.js', '!js/src/**/*'],

@@ -1,0 +1,29 @@
+<section class="l-authority">
+	<div class="l-authority_hero row expanded align-middle">
+		<div class="column">
+			<p class="l-authority_herotitle">メッセージ</p>
+			<h2 class="l-authority_herosubtitle">“ 広島を幸せな相続で満たす ”</h2>
+			<p class="l-authority_herodescription">広島をしあわせな相続で満たしたい。相続に必要なあらゆる分野の専門家集団です。<br>あなたの相続に必要な専門家をコーディネートしあなたと共に問題解決取り組みます。</p>
+		</div>
+	</div>
+	<div class="row l-contents">
+		<div class="column small-12">
+			<h2 class="l-contents_title __heading">はなまる相続が相談相手として選ばれる理由</h2>
+			<p class="l-contents_subtitle">誰に相談してよいのかお悩みなら、まず「はなまる相続」へご相談ください。</p>
+		</div>
+	</div>
+	<div class="row small-up-1 large-up-3">
+		<%
+		var authority = json.authority;
+		for (var i = 0; i < Object.keys(authority).length; i++) {
+			%>
+		<div class="column l-authority_box <%= '--' + authority[i].id; %>">
+			<p class="l-authority_point">ポイント<%= authority[i].number %></p>
+			<h3 class="l-authority_title"><%= authority[i].title; %></h3>
+			<div class="l-authority_description"><p><%= authority[i].description; %></p></div>
+		</div>
+		<%
+		}
+			%>
+	</div>
+</section>

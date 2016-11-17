@@ -3,16 +3,21 @@
 const path = {
 	home: 'http://hanamaru-souzoku.com/',
 	css: 'assets/css/',
-	svg: 'assets/svg/icons.svg#',
+	svg: 'assets/svg/svg.svg#',
 	js: 'assets/js/',
 	img: 'assets/img/',
 };
 const data = include('./data.json');
 const json = JSON.parse(data);
 %>
-<%- include('_head', {path, data}); %>
-<%- include('_hero', {path, data}); %>
-<%- include('_about', {path, data}); %>
-<%- include('_cta', {path, data}); %>
-<%- include('_service', {path, data}); %>
-<%- include('_foot', {path, data}); %>
+<%- include('_head', {path, json}); %>
+<main>
+<%- include('_hero', {path, json}); %>
+<%- include('_about', {path, json}); %>
+<%- include('_cta', {path, json, isShowTell: false}); %>
+<%- include('_service', {path, json}); %>
+<%- include('_cta', {path, json, isShowTell: false}); %>
+<%- include('_authority', {path, json}); %>
+<%- include('_cta', {path, json, isShowTell: true}); %>
+</main>
+<%- include('_foot', {path, json}); %>

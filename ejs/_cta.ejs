@@ -1,5 +1,26 @@
-<section class="l-cta bg-secondary">
+<%
+var classIsShowTell = (isShowTell) ? 'l-contents bg-white' : 'bg-secondary';
+%>
+<section class="l-cta <%= classIsShowTell; %>">
 	<div class="row">
-		<div class="column align-middle text-center"><a href="https://sub-hanamaru-souzoku.ssl-lolipop.jp/contactus/" class="button l-button_waves" target="_blank">相続の無料相談を申し込む<span class="l-button_tooltip">相続のお話をしましょう</span></a></div>
+		<div class="column align-middle text-center">
+		<%
+			if (isShowTell) {
+		%>
+			<p class="l-contents_title">お問い合わせ</p>
+			<p class="l-contents_subtitle">お気軽にお問い合わせください！</p>
+		<%
+			}
+		%>
+			<a href="https://sub-hanamaru-souzoku.ssl-lolipop.jp/contactus/" class="button l-button_waves" target="_blank">相続の無料相談を申し込む<span class="l-button_tooltip">相続のお話をしましょう</span></a>
+		<%
+			if (isShowTell) {
+		%>
+			<p class="mt3">または、電話で申し込む</p>
+			<a href="tel:0825638700" title="相続の無料相談を申し込む" class="button l-cta_btntell l-button_waves"><i class="fa fa-phone"></i><span class="show-for-small">082-563-8700<span class="l-topbar_desc">平日10：00～17：00</span></span></a></p>
+		<%
+			}
+		%>
+		</div>
 	</div>
 </section>
