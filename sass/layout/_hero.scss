@@ -62,8 +62,6 @@
 	background-color: #FFF;
 	border-radius: .5rem;
 	padding: 1rem;
-	margin: 0 auto;
-	text-align: center;
 	@include breakpoint(medium) {
 		position: absolute;
 		top: 60%;
