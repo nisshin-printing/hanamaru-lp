@@ -67,11 +67,9 @@
 		top: 60%;
 		right: 1rem;
 		width: 70%;
-		max-width: 600px;
 	}
 	@include breakpoint(large) {
 		width: 50%;
-		max-width: 600px;
 	}
 }
 .l-hero_link {

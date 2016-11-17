@@ -16,7 +16,7 @@ module.exports = {
 			minifyCSS: true,
 			minifyJS: true,
 			minifyURLs: false,
-			preserveLineBreaks: true,
+			preserveLineBreaks: false,
 			preventAttributesEscaping: false,
 			quoteCharacter: "",
 			removeEmptyAttributes: true,
